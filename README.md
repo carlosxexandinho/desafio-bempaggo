@@ -4,7 +4,7 @@
 npm install
 ```
 
-### Compilar e visualizar projetp
+### Compilar e visualizar projeto
 
 ```sh
 npm run dev
