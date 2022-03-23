@@ -36,8 +36,8 @@ section.container .content .products .item .inputquant{
 }
 
 section.container .content .products .item .title{
-     color: white;
-     background-color: #69a0df;
+     color: black;
+     background-color: #c2deff;
 }
 
 section.container .content .products .item input[type=button]{

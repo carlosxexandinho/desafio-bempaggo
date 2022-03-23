@@ -1,0 +1,22 @@
+/* ******************************************/
+/* ************* Estilos Titulo *************/
+/* ******************************************/
+section.container .title{
+     margin-top: 0;
+     border-radius: 15px 15px 100% 100% / 15px 15px 80% 80%;
+     background: #4086d7;
+     padding: 19px 40px;
+     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.30);
+   }
+   
+   section.container .title .sub{
+     font-weight: 400;
+     font-size: 25px;
+     color:white
+   }
+   section.container .title .sup{
+     font-weight: 300;
+     font-size: 15px;
+     color:white
+   }
+   

@@ -1,5 +1,6 @@
 <script setup>
   import { ref } from '@vue/reactivity'
+  import data_adesivos from '@/js/dados_adesivos.js'
   //import { RouterLink, RouterView } from 'vue-router'
 
   // controle das mensagens de status
@@ -9,33 +10,7 @@
 
   // Dados formato json que podem ser obtidos através de uma API
   const observacoes = ref('');
-  const db_adesivos = ref([
-    {
-      name: 'Vue.Js',
-      icon: 'fa-brands fa-vuejs fa-5x',
-      quant: 0
-    },
-    {
-      name: 'Html5',
-      icon: 'fa-brands fa-html5 fa-5x',
-      quant: 0
-    },
-    {
-      name: 'CSS',
-      icon: 'fa-brands fa-css3 fa-5x',
-      quant: 0
-    },
-    {
-      name: 'Angular',
-      icon: 'fa-brands fa-angular fa-5x',
-      quant: 0
-    },
-    {
-      name: 'Java',
-      icon: 'fa-brands fa-java fa-5x',
-      quant: 0
-    },
-  ])
+  const db_adesivos = ref(data_adesivos)
 
 
 
@@ -68,7 +43,6 @@
     const verificação = () =>{
         return dados.reduce((acc, som) => acc += som.quant, 0)
     }
-    console.log(verificação());
 
     // timeout para simução de carregando
     setTimeout(() => {
@@ -88,7 +62,6 @@
 </script>
 
 <template>
-
   <section class="container">
     
       <div class="title">
@@ -132,8 +105,10 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
+@import url('css/titulo.css');
 @import url('css/content.css');
 @import url('css/observacoes.css');
+@import url('css/footer.css');
 
 
 * {
@@ -167,6 +142,9 @@ button, input[type=button]:active{
 /* end style button */
 
 
+
+
+/* Estilo Universal */
 body{
   display: flex;
   justify-content: center;
@@ -190,42 +168,4 @@ section.container{
   -moz-box-shadow: 4px 14px 28px -9px rgba(0,0,0,0.53);
   box-shadow: 4px 14px 28px -9px rgba(0,0,0,0.53);
 }
-
-/* ******************************************/
-/* ************* Estilos Titulo *************/
-/* ******************************************/
-section.container .title{
-  margin-top: 0;
-  border-radius: 15px 15px 100% 100% / 15px 15px 80% 80%;
-  background: #4086d7;
-  padding: 19px 40px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.30);
-}
-
-section.container .title .sub{
-  font-weight: 400;
-  font-size: 25px;
-  color:white
-}
-section.container .title .sup{
-  font-weight: 300;
-  font-size: 15px;
-  color:white
-}
-
-
-/* ******************************************/
-/* ************* Estilos Footer *************/
-/* ******************************************/
-section.container .footer{
-  padding: 15px 20px;
-  background: #cef4ff;
-  border-radius: 0 0 15px 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-
 </style>

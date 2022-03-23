@@ -1,10 +1,10 @@
-## Project Setup
+## Instalar todas as dependencias
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Compilar e visualizar projetp
 
 ```sh
 npm run dev
